@@ -16,6 +16,6 @@ class BasketPage(BasePage):
         "No message about empty basket"
     
     # alternative version
-    # def should_be_message_basket_is_empt2(self):
-    #     message = self.browser.find_element(By.CSS_SELECTOR, "#content_inner p").text
+    # def should_be_message_basket_is_empty(self):
+    #     message = self.browser.find_element(*BasePageLocators.BASKET_EMPTY_MESSAGE).text
     #     assert "Your basket is empty" in message, "No message about empty basket"

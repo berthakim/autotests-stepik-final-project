@@ -9,10 +9,8 @@ class ProductPage(BasePage):
         self.should_be_button()
         button = self.browser.find_element(*ProductPageLocators.ADD_PRODUCT_BUTTON)  # you call this same method twice
         button.click()
-        try:
+        if "promo-offer" in self.browser.current_url:
             self.solve_quiz_and_get_code()
-        except (NoAlertPresentException):
-            pass
 
     def should_be_messages_after_adding_products(self):
         self.should_be_success_message()
