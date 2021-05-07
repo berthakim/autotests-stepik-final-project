@@ -13,6 +13,8 @@ class ProductPage(BasePage):
             self.solve_quiz_and_get_code()
         except (NoAlertPresentException):
             pass
+
+    def should_be_messages_after_adding_products(self):
         self.should_be_success_message()
         self.should_be_price_of_basket()
     
@@ -40,7 +42,7 @@ class ProductPage(BasePage):
         "Price in message doesn't equal to price of product"
 
     def should_not_be_success_message(self):
-    	assert self.is_not_element_present(*ProductPageLocators.PRODUCT_NAME_IN_SUCCESS_MESSAGE), \
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_NAME_IN_SUCCESS_MESSAGE), \
         "Success message is presented, but should not be"
 
     def should_desappear_success_message(self):
