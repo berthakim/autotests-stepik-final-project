@@ -39,6 +39,7 @@ class TestUserAddToBasketFromProductPage:
         page.add_article_to_cart()
 
 
+# there's parametrized version at the very buttom of this page
 @pytest.mark.need_review
 def test_guest_can_add_product_to_basket(browser):
     link = link_book
