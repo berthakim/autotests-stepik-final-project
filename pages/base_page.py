@@ -7,12 +7,11 @@ from .locators import BasePageLocators
 import math
 
 
-class BasePage():
+class BasePage:
 
-    def __init__(self, browser, url, timeout=10):
+    def __init__(self, browser, url):
         self.browser = browser
         self.url = url
-        # self.browser.implicitly_wait(timeout)
 
     def open(self):
         self.browser.get(self.url)
@@ -24,9 +23,6 @@ class BasePage():
             return False
         return True
 
-    # def is_alert_present(self):
-
-    # this method is used in тесте для получения проверочного кода
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]
@@ -71,4 +67,4 @@ class BasePage():
 
     def should_be_authorized_user(self):
         assert self.is_element_present(*BasePageLocators.USER_ICON), \
-        "User icon is not presented, probably unauthorised user"
+            "User icon is not presented, probably unauthorised user"
