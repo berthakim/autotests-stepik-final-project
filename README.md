@@ -10,10 +10,10 @@ Tools: Selenium, PyTest, Python 3.7+
 We used the standard Page Object Model pattern for tests developping
 
 We tested such site elements as
-- user registration and authentication check;
-- confirmation messages;
 - presence / absence of elements
-- pages navigation
+- confirmation messages;
+- navigation between pages
+- user registration and authentication check;
 - <...>
 
 -------------------------------------------
@@ -23,11 +23,11 @@ We tested such site elements as
 
 Стек: Selenium, PyTest, Python 3.7+
 
-При разработке тестов мы применяли стандартный паттерн Page Object Model
+При разработке тестов применялся стандартный паттерн Page Object Model
 
 Тестровались такие элементы сайта как
-- регистрация пользователя и проверка аутентификации
-- сообщения о подтверждении выполненых действий
 - наличие/отсутствие элементов
+- сообщения о подтверждении выполненых действий
 - переход по страницам
+- регистрация пользователя и проверка аутентификации
 - <...>
